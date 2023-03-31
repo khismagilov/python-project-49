@@ -18,8 +18,7 @@ def generate_question():
 
 
 def calculate_answer(number1, number2):
-    result = math.gcd(number1, number2)
-    return result
+    return math.gcd(number1, number2)
 
 
 def gcd_game(name):
@@ -30,11 +29,7 @@ def gcd_game(name):
         print(f'Question: {question}')
         correct_answer = calculate_answer(number1, number2)
         user_answer = input('Your answer: ')
-        if not user_answer.isdigit():
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            break
-        user_answer = int(user_answer)
-        if user_answer == correct_answer:
+        if int(user_answer) == correct_answer and user_answer.isdigit():
             print('Correct!')
             counter += 1
         else:
