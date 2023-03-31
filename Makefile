@@ -14,3 +14,7 @@ brain-even:
 	poetry run brain-even
 brain-calc:
 	poetry run brain-calc
+build-plus:
+	poetry build
+	poetry publish --dry-run
+	python3 -m pip install --user --force-reinstall dist/*.whl

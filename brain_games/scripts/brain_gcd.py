@@ -1,5 +1,6 @@
 import random
 import prompt
+import math
 
 
 def main():
@@ -17,12 +18,8 @@ def generate_question():
 
 
 def calculate_answer(number1, number2):
-    while number1 != 0 and number2 != 0:
-        if number1 > number2:
-            number1 = number1 % number2
-        else:
-            number2 = number1 % number2
-    return number1 + number2
+    result = math.gcd(number1, number2)
+    return result
 
 
 def gcd_game(name):
@@ -31,8 +28,12 @@ def gcd_game(name):
         number1, number2, question = generate_question()
         print('Find the greatest common divisor of given numbers.')
         print(f'Question: {question}')
-        user_answer = int(input('Your answer: '))
         correct_answer = calculate_answer(number1, number2)
+        user_answer = input('Your answer: ')
+        if not user_answer.isdigit():
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            break
+        user_answer = int(user_answer)
         if user_answer == correct_answer:
             print('Correct!')
             counter += 1
@@ -40,9 +41,9 @@ def gcd_game(name):
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             break
     if counter == 3:
-        return f'Congratulations, {name}!'
+        print(f'Congratulations, {name}!')
     else:
-        return f"Let's try again, {name}!'"
+        print(f"Let's try again, {name}!")
 
 
 if __name__ == '__main__':
