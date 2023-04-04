@@ -1,5 +1,5 @@
 import random
-from brain_games.games.logic import greet
+from brain_games.games.logic import greet, congrats
 
 
 def calculator_game(name):
@@ -27,6 +27,6 @@ def calculator_game(name):
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
             break
     if correct_answers == 3:
-        return f'Congratulations, {name}!'
+        print(congrats(name))
     else:
         return f"Let's try again, {name}"
