@@ -7,6 +7,24 @@ def ask_question():
     print(f'Question: {number}')
     return 'yes' if number % 2 == 0 else 'no'
 
+def check_answer():
+    if answer == 'Yes' or answer == 'No':
+        if number % 2 == 0 and answer == 'Yes':
+            print('Correct!')
+            correct_answers += 1
+        elif number % 2 == 0 and answer_capital == 'No':
+            print("'no' is wrong answer ;(. Correct answer was 'yes'")
+            break
+        elif not number % 2 == 0 and answer_capital == 'Yes':
+            print("'yes' is wrong answer ;(. Correct answer was 'no'")
+            break
+        elif not number % 2 == 0 and answer_capital == 'No':
+            print('Correct!')
+            correct_answers += 1
+    else:
+        break
+    
+
 def even_game(name):
     correct_answers = 0
     while correct_answers < 3:
