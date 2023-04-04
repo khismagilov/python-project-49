@@ -3,8 +3,8 @@ from brain_games.games.logic import greet, congrats
 
 
 def main():
-    greet()
-    even_game()
+    name = greet()
+    even_game(name)
     congrats(name)
 
 

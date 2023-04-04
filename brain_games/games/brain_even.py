@@ -7,11 +7,11 @@ def ask_question():
     print(f'Question: {number}')
     return 'yes' if number % 2 == 0 else 'no'
 
-def play_game():
+def even_game(name):
     correct_answers = 0
     while correct_answers < 3:
         correct_answer = ask_question()
-        answer = prompt.string('Your answer: ').lower()
+        answer = input('Your answer: ').lower()
         if answer == correct_answer:
             print('Correct!')
             correct_answers += 1
