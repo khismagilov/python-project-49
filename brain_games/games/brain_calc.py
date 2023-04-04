@@ -1,5 +1,5 @@
 import random
-from brain_games.games.logic import name
+from brain_games.games.logic import greet
 
 
 def calculator_game(name):
