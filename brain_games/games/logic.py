@@ -10,6 +10,6 @@ def greet():
 
 def congrats(name):
     if counter == 3:
-        print(f'Congratulations, {name}!')
+        return f'Congratulations, {name}!'
     else:
-        print(f"Let's try again, {name}")
+        return f"Let's try again, {name}"
