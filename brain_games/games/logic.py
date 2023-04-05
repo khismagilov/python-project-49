@@ -9,4 +9,7 @@ def greet():
 
 
 def congrats(name):
-    print(f'Congratulations, {name}!')
+    if counter == 3:
+        print(f'Congratulations, {name}!')
+    else:
+        print(f"Let's try again, {name}")
