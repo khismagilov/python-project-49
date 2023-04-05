@@ -4,6 +4,7 @@ from brain_games.games.logic import greet, congrats
 
 def main():
     name = greet()
+    counter = 0
     calculator_game(name)
     congrats(name, counter)	
 
