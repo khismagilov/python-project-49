@@ -8,26 +8,27 @@ def generate_question():
     operations = ['+', '-', '*']
     operation = random.choice(operations)
     question = f"{number1} {operation} {number2}"
-    print('What is the result of the expression?')
-    print(f'Question: {question}')
+    answer = calculate_answer(number1, number2, operation)
+    return question, answer
+
+def calculate_answer(num1, num2, op):
+    if op == '+':
+        return num1 + num2
+    elif op == '-':
+        return num1 - num2
+    elif op == '*':
+        return num1 * num2
 
 
 def calculator_game(name):
     counter = 0
     while counter < 3:
-        asked_question = generate_question()
-        user_answer = input('Your answer: ')
-        if operation == '+':
-            answer = number1 + number2
-        elif operation == '-':
-            answer = number1 - number2
-        else:
-            answer = number1 * number2
-
-        if int(user_answer) == answer:
+        question, correct_answer = generate_question()
+        user_answer = input(f'Question: {question}\nYour answer: ')
+        if int(user_answer) == correct_answer:
             print('Correct!')
             counter += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{answer}'.")
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             break
     print(congrats(name))
