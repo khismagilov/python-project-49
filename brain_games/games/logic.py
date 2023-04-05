@@ -8,7 +8,7 @@ def greet():
     return name
 
 
-def congrats(name):
+def congrats(name, counter):
     if counter == 3:
         return f'Congratulations, {name}!'
     else:
