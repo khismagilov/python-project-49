@@ -31,4 +31,4 @@ def calculator_game(name):
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             break
-    print(congrats(name))
+    print(congrats(name, counter))
