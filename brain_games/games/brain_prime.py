@@ -11,13 +11,17 @@ def is_prime(n):
     return True
 
 
+def ask_question():
+    n = random.randint(1, 100)
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    print(f'Question: {n}')
+    user_answer = input('Your answer: ')
+
+
 def prime_game(name):
     counter = 0
     while counter < 3:
-        n = random.randint(1, 100)
-        print('Answer "yes" if given number is prime. Otherwise answer "no".')
-        print(f'Question: {n}')
-        user_answer = input('Your answer: ')
+        number = ask_question()
         correct_answer = 'yes' if is_prime(n) else 'no'
         if user_answer.lower() == correct_answer:
             print("Correct!")
