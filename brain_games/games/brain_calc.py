@@ -21,7 +21,7 @@ def calculate_answer(num1, num2, op):
         return num1 * num2
 
 
-def calculator_game(name):
+def calculator_game():
     print('What is the result of the expression?')
     counter = 0
     while counter < 3:
