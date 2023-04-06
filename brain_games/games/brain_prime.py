@@ -12,7 +12,7 @@ def main():
 def is_prime(n):
     if n < 2:
         return False
-    for i in range(2, int(n**0.5)+1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             return False
     return True
@@ -30,7 +30,8 @@ def prime_quiz(name):
             print("Correct!")
             counter += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{user_answer}' is wrong answer ;(.' 
+                  f"Correct answer was '{correct_answer}'.")
             break
     if counter == 3:
         print(f'Congratulations, {name}!')
