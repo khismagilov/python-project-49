@@ -17,12 +17,12 @@ def check_answer(number, answer):
         elif number % 2 == 0 and answer_capital == 'No':
             print("'no' is wrong answer ;(. Correct answer was 'yes'")
             return False
-        elif not number % 2 == 0 and answer_capital == 'Yes':
-            print("'yes' is wrong answer ;(. Correct answer was 'no'")
-            return False
         elif not number % 2 == 0 and answer_capital == 'No':
             print('Correct!')
             return True
+        elif not number % 2 == 0 and answer_capital == 'Yes':
+            print("'yes' is wrong answer ;(. Correct answer was 'no'")
+            return False
     else:
         return False
     
