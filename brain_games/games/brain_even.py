@@ -9,7 +9,7 @@ def ask_question():
 
 
 def check_answer(number, answer_capital):
-    answer_capital = answer.capitalize() 
+    answer_capital = answer_capital.capitalize()
     if answer_capital == 'Yes' or answer_capital == 'No':
         if number % 2 == 0 and answer_capital == 'Yes':
             print('Correct!')
@@ -32,7 +32,7 @@ def even_game(name):
     while correct_answers < 3:
         correct_answer = ask_question()
         answer = input('Your answer: ').lower()
-        if check_answer(correct_answer, answer.capitalize()):
+        if check_answer(correct_answer, answer):
             print('Correct!')
             correct_answers += 1
         else:
@@ -45,6 +45,7 @@ def main():
     greet()
     name = input('May I have your name? ')
     print('Answer "yes" if the number is even, otherwise answer "no".')
+    even_game(name)
     print(congrats(name))
     
 
