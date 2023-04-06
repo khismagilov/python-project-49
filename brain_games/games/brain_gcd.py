@@ -30,7 +30,3 @@ def gcd_game(name):
                   f"Correct answer was '{correct_answer}'.")
             break
     print(congrats(name, counter))
-
-
-if __name__ == '__main__':
-    main()
