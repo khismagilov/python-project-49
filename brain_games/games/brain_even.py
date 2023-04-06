@@ -33,7 +33,7 @@ def even_game(name):
         correct_answer = ask_question()
         answer = input('Your answer: ')
         is_correct = is_answer_correct(correct_answer, answer)
-        print_answer_result(is_correct, correct_answer)
+        print_answer_result(is_correct, correct_answer, answer)
         if is_correct:
             counter += 1
         else:
