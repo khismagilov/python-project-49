@@ -1,5 +1,5 @@
 import random
-from brain_games.games.logic import congrats
+from brain_games.games.logic import greet, congrats
 
 
 def generate_question():
