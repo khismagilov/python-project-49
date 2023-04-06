@@ -1,32 +1,23 @@
 import random
 import prompt
-
-
-def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    brain_progression(name)
+from brain_games.games.logic import congrats
 
 
 def brain_progression(name):
     counter = 0
     while counter < 3:
         question, removed_number = generate_question()
-        print(question)
+        print(f'Question: {question}')
         print('What number is missing in the progression?')
         user_answer = input('Your answer: ')
         if user_answer.isdigit() and int(user_answer) == int(removed_number):
             print('Correct!')
             counter += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(." 
+            print(f"'{user_answer}' is wrong answer ;(."
                   f"Correct answer was '{removed_number}'.")
             break
-    if counter == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
+    print(congrats(name, counter))
 
 
 def generate_question():
@@ -43,7 +34,3 @@ def generate_question():
         return str_question, removed_number
     else:
         return generate_question()
-
-
-if __name__ == '__main__':
-    main()
