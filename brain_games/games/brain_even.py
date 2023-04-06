@@ -28,6 +28,7 @@ def check_answer(number, answer):
     
 
 def even_game(name):
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     counter = 0
     while counter < 3:
         correct_answer = ask_question()
@@ -39,10 +40,3 @@ def even_game(name):
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{'yes' if correct_answer % 2 == 0 else 'no'}'.")
             break
     print(congrats(name))
-
-
-def main():
-    greet()
-    name = input('May I have your name? ')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    even_game(name)
