@@ -12,13 +12,6 @@ This is a collection of five command-line interface games designed to exercise y
 -   GCD (Greatest Common Divisor)
 -   Calculator
 
-## Installation
-
-You can install Brain Games using the following command:
-
-
-    git clone git@github.com:khismagilov/python-project-49.git 
-
 
 ## Installation
 
