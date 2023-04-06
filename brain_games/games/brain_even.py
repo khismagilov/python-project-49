@@ -28,13 +28,13 @@ def check_answer(number, answer):
     
 
 def even_game(name):
-    correct_answers = 0
-    while correct_answers < 3:
+    counter = 0
+    while counter < 3:
         correct_answer = ask_question()
         answer = input('Your answer: ').lower()
         if check_answer(correct_answer, answer):
             print('Correct!')
-            correct_answers += 1
+            counter += 1
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{'yes' if correct_answer % 2 == 0 else 'no'}'.")
             return False
