@@ -8,8 +8,8 @@ def ask_question():
     return 'yes' if number % 2 == 0 else 'no'
 
 
-def check_answer(number, answer_capital):
-    answer_capital = answer_capital.capitalize()
+def check_answer(number, answer):
+    answer_capital = answer.capitalize()
     if answer_capital == 'Yes' or answer_capital == 'No':
         if number % 2 == 0 and answer_capital == 'Yes':
             print('Correct!')
