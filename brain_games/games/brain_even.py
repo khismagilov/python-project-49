@@ -37,8 +37,8 @@ def even_game(name):
             counter += 1
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{'yes' if correct_answer % 2 == 0 else 'no'}'.")
-            return False
-    return True
+            break
+    print(congrats(name))
 
 
 def main():
@@ -46,8 +46,3 @@ def main():
     name = input('May I have your name? ')
     print('Answer "yes" if the number is even, otherwise answer "no".')
     even_game(name)
-    print(congrats(name))
-    
-
-if __name__ == '__main__':
-    main()
