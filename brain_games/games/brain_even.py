@@ -34,9 +34,7 @@ def even_game(name):
         correct_answer = ask_question()
         answer = input('Your answer: ').lower()
         if check_answer(correct_answer, answer):
-            print('Correct!')
             counter += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{'yes' if correct_answer % 2 == 0 else 'no'}'.")
             break
     print(congrats(name, counter))
