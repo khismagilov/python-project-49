@@ -17,7 +17,7 @@ def is_answer_correct(number, answer):
         return False
 
 
-def print_answer_result(is_correct, number):
+def print_answer_result(is_correct, number, answer):
     if is_correct:
         print('Correct!')
     else:
