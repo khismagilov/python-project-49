@@ -5,7 +5,7 @@ from brain_games.games.logic import greet, congrats
 def ask_question():
     number = random.randint(1, 100)
     print(f'Question: {number}')
-    return 'yes' if number % 2 == 0 else 'no'
+    return number
 
 
 def check_answer(number, answer):
@@ -36,7 +36,7 @@ def even_game(name):
             print('Correct!')
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{'yes' if correct_answer % 2 == 0 else 'no'}'.")
             return False
     return True
 
