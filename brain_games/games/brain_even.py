@@ -8,24 +8,22 @@ def ask_question():
     return number
 
 
-def check_answer(number, answer):
-    answer_capital = answer.capitalize()
-    if answer_capital == 'Yes' or answer_capital == 'No':
-        if number % 2 == 0 and answer_capital == 'Yes':
-            print('Correct!')
-            return True
-        elif number % 2 == 0 and answer_capital == 'No':
-            print("'no' is wrong answer ;(. Correct answer was 'yes'")
-            return False
-        elif not number % 2 == 0 and answer_capital == 'No':
-            print('Correct!')
-            return True
-        elif not number % 2 == 0 and answer_capital == 'Yes':
-            print("'yes' is wrong answer ;(. Correct answer was 'no'")
-            return False
+def is_answer_correct(number, answer):
+    if answer.lower() == 'yes':
+        return number % 2 == 0
+    elif answer.lower() == 'no':
+        return number % 2 != 0
     else:
-        correct = 'yes' if number % 2 == 0 else 'no'
-        print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
+        return False
+
+
+def print_answer_result(is_correct, number):
+    if is_correct:
+        print('Correct!')
+    else:
+        correct_answer = 'yes' if number % 2 == 0 else 'no'
+        print(f"'{answer}' is wrong answer ;(."
+              f"Correct answer was '{correct_answer}'.")
 
 
 def even_game(name):
@@ -33,8 +31,10 @@ def even_game(name):
     counter = 0
     while counter < 3:
         correct_answer = ask_question()
-        answer = input('Your answer: ').lower()
-        if check_answer(correct_answer, answer):
+        answer = input('Your answer: ')
+        is_correct = is_answer_correct(correct_answer, answer)
+        print_answer_result(is_correct, correct_answer)
+        if is_correct:
             counter += 1
         else:
             break
