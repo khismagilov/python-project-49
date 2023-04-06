@@ -12,4 +12,4 @@ def congrats(name, counter):
     if counter == 3:
         return f'Congratulations, {name}!'
     else:
-        return f"Let's try again, {name}"
+        return f"Let's try again, {name}!"
