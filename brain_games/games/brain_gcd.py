@@ -1,13 +1,6 @@
 import random
-import prompt
 import math
-
-
-def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    gcd_game(name)
+from brain_games.games.logic import greet, congrats
 
 
 def generate_question():
@@ -35,10 +28,7 @@ def gcd_game(name):
         else:
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             break
-    if counter == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
+    print(congrats(name, counter))
 
 
 if __name__ == '__main__':
