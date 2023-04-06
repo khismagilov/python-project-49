@@ -1,5 +1,4 @@
 import random
-import prompt
 from brain_games.games.logic import congrats
 
 
