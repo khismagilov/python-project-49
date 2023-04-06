@@ -7,22 +7,23 @@ def ask_question():
     print(f'Question: {number}')
     return 'yes' if number % 2 == 0 else 'no'
 
-def check_answer():
-    if answer == 'Yes' or answer == 'No':
-        if number % 2 == 0 and answer == 'Yes':
+
+def check_answer(number, answer_capital):
+    if answer_capital == 'Yes' or answer_capital == 'No':
+        if number % 2 == 0 and answer_capital == 'Yes':
             print('Correct!')
-            correct_answers += 1
+            return True
         elif number % 2 == 0 and answer_capital == 'No':
             print("'no' is wrong answer ;(. Correct answer was 'yes'")
-            break
+            return False
         elif not number % 2 == 0 and answer_capital == 'Yes':
             print("'yes' is wrong answer ;(. Correct answer was 'no'")
-            break
+            return False
         elif not number % 2 == 0 and answer_capital == 'No':
             print('Correct!')
-            correct_answers += 1
+            return True
     else:
-        break
+        return False
     
 
 def even_game(name):
@@ -30,7 +31,7 @@ def even_game(name):
     while correct_answers < 3:
         correct_answer = ask_question()
         answer = input('Your answer: ').lower()
-        if answer == correct_answer:
+        if check_answer(correct_answer, answer.capitalize()):
             print('Correct!')
             correct_answers += 1
         else:
@@ -41,12 +42,10 @@ def even_game(name):
 
 def main():
     greet()
+    name = input('May I have your name? ')
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    if play_game():
-        print(congrats(name))
-    else:
-        print(f"Let's try again, {name}")
-
+    print(congrats(name))
+    
 
 if __name__ == '__main__':
     main()
