@@ -3,7 +3,7 @@ import prompt
 from brain_games.games.logic import congrats
 
 
-def brain_progression(name):
+def progression_game(name):
     counter = 0
     while counter < 3:
         question, removed_number = generate_question()
