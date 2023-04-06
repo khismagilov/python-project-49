@@ -39,4 +39,4 @@ def even_game(name):
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{'yes' if correct_answer % 2 == 0 else 'no'}'.")
             break
-    print(congrats(name))
+    print(congrats(name, counter))
