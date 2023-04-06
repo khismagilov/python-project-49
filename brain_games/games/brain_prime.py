@@ -16,7 +16,7 @@ def ask_question():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     print(f'Question: {n}')
     user_answer = input('Your answer: ')
-    return user_answer
+    return user_answer, n
 
 
 def prime_game(name):
