@@ -21,6 +21,7 @@ def calculate_answer(num1, num2, op):
 
 
 def calculator_game(name):
+    print('What is the result of the expression?')
     counter = 0
     while counter < 3:
         question, correct_answer = generate_question()
