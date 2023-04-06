@@ -11,7 +11,7 @@ def is_prime(n):
     return True
 
 
-def prime_quiz(name):
+def prime_game(name):
     counter = 0
     while counter < 3:
         n = random.randint(1, 100)
