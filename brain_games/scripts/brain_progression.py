@@ -13,7 +13,7 @@ def brain_progression(name):
     counter = 0
     while counter < 3:
         question, removed_number = generate_question()
-        print(question)
+        print(f'Question: {question}')
         print('What number is missing in the progression?')
         user_answer = input('Your answer: ')
         if user_answer.isdigit() and int(user_answer) == int(removed_number):
