@@ -11,6 +11,7 @@ def generate_question():
     answer = calculate_answer(number1, number2, operation)
     return question, answer
 
+
 def calculate_answer(num1, num2, op):
     if op == '+':
         return num1 + num2
