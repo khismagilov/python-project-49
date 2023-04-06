@@ -20,7 +20,8 @@ def brain_progression(name):
             print('Correct!')
             counter += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{removed_number}'.")
+            print(f"'{user_answer}' is wrong answer ;(." 
+                  f"Correct answer was '{removed_number}'.")
             break
     if counter == 3:
         print(f'Congratulations, {name}!')
