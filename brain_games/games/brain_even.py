@@ -26,7 +26,7 @@ def check_answer(number, answer):
     else:
         correct = 'yes' if number % 2 == 0 else 'no'
         print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct}'.")
-    
+
 
 def even_game(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
