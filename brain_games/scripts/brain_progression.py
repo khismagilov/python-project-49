@@ -6,7 +6,7 @@ def main():
     name = greet()
     counter = 0
     progression_game(name)
-    congrats(name, counter)	
+    congrats(name, counter)
 
 
 if __name__ == '__main__':
