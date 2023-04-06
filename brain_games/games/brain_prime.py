@@ -1,12 +1,5 @@
 import random
-import prompt
-
-
-def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    prime_quiz(name)
+from brain_games.games.logic import congrats
 
 
 def is_prime(n):
@@ -33,11 +26,4 @@ def prime_quiz(name):
             print(f"'{user_answer}' is wrong answer ;(.' "
                   f"Correct answer was '{correct_answer}'.")
             break
-    if counter == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
-
-
-if __name__ == '__main__':
-    main()
+    print(congrats(name, counter))
