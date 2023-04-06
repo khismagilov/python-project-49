@@ -16,13 +16,13 @@ def ask_question():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     print(f'Question: {n}')
     user_answer = input('Your answer: ')
-    return user_answer, n
+    return n, user_answer
 
 
 def prime_game(name):
     counter = 0
     while counter < 3:
-        user_answer = ask_question()
+        n, user_answer = ask_question()
         correct_answer = 'yes' if is_prime(n) else 'no'
         if user_answer.lower() == correct_answer:
             print("Correct!")
