@@ -1,5 +1,5 @@
 from brain_games.games.brain_calc import calculator_game
-from brain_games.games.logic import greet, congrats
+from brain_games.games.logic import logic
 
 
 def main():
