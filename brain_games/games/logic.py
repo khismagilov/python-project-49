@@ -8,7 +8,9 @@ def greet():
     return name
 
 
-def game_loop(name):
+def logic(game, name):
+    greet()
+    print(game.RULES)
     counter = 0
     while counter < 3:
         question, correct_answer = get_question_and_right_answer()
@@ -21,10 +23,6 @@ def game_loop(name):
                   f"Correct answer was '{correct_answer}'.")
             break
     print(congrats(name, counter))
-
-
-def logic(game):
-    print(game.RULES)
 
 
 def congrats(name, counter):
