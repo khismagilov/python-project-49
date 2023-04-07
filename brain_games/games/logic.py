@@ -9,7 +9,7 @@ def greet():
 
 
 def logic(game, name):
-    greet()
+    greet(name)
     print(game.RULES)
     counter = 0
     while counter < 3:
