@@ -9,8 +9,8 @@ def greet():
 
 
 def logic(game_module):
-  print(game_module.RULES)
-
+    print(game_module.RULES)
+    question, right_answer = game_module.get_question_and_right_answer()
 
 def congrats(name, counter):
     if counter == 3:
