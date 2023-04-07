@@ -11,9 +11,9 @@ def generate_question_and_answer():
     operation = random.choice(operations)
     question = f"{number1} {operation} {number2}"
     if operation == '+':
-        answer = num1 + num2
+        correct_answer = num1 + num2
     elif operation == '-':
-        answer = num1 - num2
+        correct_answer = num1 - num2
     elif operation == '*':
-        answer = num1 * num2
+        correct_answer = num1 * num2
     return question, answer
