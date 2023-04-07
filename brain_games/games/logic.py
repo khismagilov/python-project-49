@@ -25,7 +25,7 @@ def game_loop(name):
 
 def logic(game):
     print(game.RULES)
-    question, right_answer = game_module.get_question_and_right_answer()
+    question, right_answer = game.get_question_and_right_answer()
 
 
 def congrats(name, counter):
