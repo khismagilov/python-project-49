@@ -2,6 +2,9 @@ import random
 from brain_games.games.logic import congrats
 
 
+RULES = 'some rule for game'
+
+
 def generate_question():
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
