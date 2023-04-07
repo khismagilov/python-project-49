@@ -11,9 +11,9 @@ def get_question_and_right_answer():
     operation = random.choice(operations)
     question = f"{number1} {operation} {number2}"
     if operation == '+':
-        correct_answer = num1 + num2
+        correct_answer = number1 + number2
     elif operation == '-':
-        correct_answer = num1 - num2
+        correct_answer = number1 - number2
     elif operation == '*':
-        correct_answer = num1 * num2
+        correct_answer = number1 * number2
     return question, correct_answer
