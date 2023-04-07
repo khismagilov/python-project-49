@@ -8,9 +8,25 @@ def greet():
     return name
 
 
-def logic(game_module):
-    print(game_module.RULES)
+def game_loop(name):
+    counter = 0
+    while counter < 3:
+        question, correct_answer = generate_question()
+        user_answer = input(f'Question: {question}\nYour answer: ')
+        if user_answer == correct_answer:
+            print('Correct!')
+            counter += 1
+        else:
+            print(f"'{user_answer}' is wrong answer ;(."
+                  f"Correct answer was '{correct_answer}'.")
+            break
+    print(congrats(name, counter))
+
+
+def logic(game):
+    print(game.RULES)
     question, right_answer = game_module.get_question_and_right_answer()
+
 
 def congrats(name, counter):
     if counter == 3:
