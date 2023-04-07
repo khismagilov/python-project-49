@@ -58,8 +58,13 @@ In this game, you will be shown two random numbers and you must guess their grea
 In this game, you will be shown a random arithmetic expression and you must evaluate it.
 
 
+Calculator
 [![asciicast](https://asciinema.org/a/4Qw5ogomVgKDKClr7sG6YjyjB.svg)](https://asciinema.org/a/4Qw5ogomVgKDKClr7sG6YjyjB)
+Even or Odd
 [![asciicast](https://asciinema.org/a/dlqZwESGr9iAzxdMQj4ghTHWP.svg)](https://asciinema.org/a/dlqZwESGr9iAzxdMQj4ghTHWP)
+Prime Number
 [![asciicast](https://asciinema.org/a/N91VUFAGerG2fXg5wpEoUwTkO.svg)](https://asciinema.org/a/N91VUFAGerG2fXg5wpEoUwTkO)
+GCD (Greatest Common Divisor)
 [![asciicast](https://asciinema.org/a/UuMyKYL8QcFi0nzchnByzOgs2.svg)](https://asciinema.org/a/UuMyKYL8QcFi0nzchnByzOgs2)
+Progression
 [![asciicast](https://asciinema.org/a/NZOINr2o3oAH0d8FUh72W69aM.svg)](https://asciinema.org/a/NZOINr2o3oAH0d8FUh72W69aM)
