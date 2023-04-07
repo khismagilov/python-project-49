@@ -3,10 +3,7 @@ from brain_games.games.logic import logic
 
 
 def main():
-    name = greet()
-    counter = 0
-    calculator_game(name)
-    congrats(name, counter)
+    logic(calculator_game)
 
 
 if __name__ == '__main__':
