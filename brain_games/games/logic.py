@@ -11,7 +11,7 @@ def greet():
 def game_loop(name):
     counter = 0
     while counter < 3:
-        question, correct_answer = generate_question()
+        question, correct_answer = get_question_and_right_answer()
         user_answer = input(f'Question: {question}\nYour answer: ')
         if user_answer == correct_answer:
             print('Correct!')
@@ -25,7 +25,6 @@ def game_loop(name):
 
 def logic(game):
     print(game.RULES)
-    question, right_answer = game.get_question_and_right_answer()
 
 
 def congrats(name, counter):
