@@ -16,4 +16,4 @@ def generate_question_and_answer():
         correct_answer = num1 - num2
     elif operation == '*':
         correct_answer = num1 * num2
-    return question, answer
+    return question, correct_answer
