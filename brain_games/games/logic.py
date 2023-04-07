@@ -8,8 +8,8 @@ def greet():
     return name
 
 
-def logic(game, name):
-    greet(name)
+def logic(game):
+    name = greet()
     print(game.RULES)
     counter = 0
     while counter < 3:
