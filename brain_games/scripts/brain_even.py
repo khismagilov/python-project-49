@@ -1,12 +1,9 @@
-from brain_games.games.brain_even import even_game
-from brain_games.games.logic import greet, congrats
+from brain_games.games import brain_even
+from brain_games.games.logic import logic
 
 
 def main():
-    name = greet()
-    counter = 0
-    even_game(name)
-    congrats(name, counter)
+    logic(brain_even)
 
 
 if __name__ == '__main__':
