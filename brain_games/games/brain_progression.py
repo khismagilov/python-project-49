@@ -1,22 +1,7 @@
 import random
-from brain_games.games.logic import congrats
 
 
-def progression_game(name):
-    counter = 0
-    while counter < 3:
-        question, removed_number = generate_question()
-        print(f'Question: {question}')
-        print('What number is missing in the progression?')
-        user_answer = input('Your answer: ')
-        if user_answer.isdigit() and int(user_answer) == int(removed_number):
-            print('Correct!')
-            counter += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(."
-                  f"Correct answer was '{removed_number}'.")
-            break
-    print(congrats(name, counter))
+RULES = 'What number is missing in the progression?'
 
 
 def generate_question():
@@ -27,9 +12,9 @@ def generate_question():
     question = number_list[number1:number2:number3]
     if len(question) >= 5 and len(question) <= 10:
         random_number = random.randint(0, len(question) - 1)
-        removed_number = question[random_number]
+        correct_answer = question[random_number]
         question[random_number] = '..'
         str_question = ' '.join([str(num) for num in question])
-        return str_question, removed_number
+        return question, correct_answer
     else:
         return generate_question()
