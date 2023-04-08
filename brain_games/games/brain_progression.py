@@ -4,7 +4,7 @@ import random
 RULES = 'What number is missing in the progression?'
 
 
-def generate_question():
+def get_question_and_right_answer():
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
     number3 = random.randint(1, 100)
@@ -17,4 +17,4 @@ def generate_question():
         str_question = ' '.join([str(num) for num in question])
         return question, correct_answer
     else:
-        return generate_question()
+        return get_question_and_right_answer()
