@@ -1,12 +1,9 @@
-from brain_games.games.brain_prime import prime_game
-from brain_games.games.logic import greet, congrats
+from brain_games.games import brain_prime
+from brain_games.games.logic import logic
 
 
 def main():
-    name = greet()
-    counter = 0
-    prime_game(name)
-    congrats(name, counter)
+    logic(brain_prime)
 
 
 if __name__ == '__main__':
