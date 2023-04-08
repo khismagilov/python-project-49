@@ -1,4 +1,5 @@
 import random
+import math
 
 
 def get_question_and_right_answer():
