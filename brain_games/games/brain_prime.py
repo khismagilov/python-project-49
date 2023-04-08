@@ -1,34 +1,10 @@
 import random
-from brain_games.games.logic import congrats
 
 
-def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-
-def ask_question():
+def get_question_and_right_answer():
     n = random.randint(1, 100)
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    print(f'Question: {n}')
-    user_answer = input('Your answer: ')
-    correct_answer = 'yes' if is_prime(n) else 'no'
-    return n, user_answer, correct_answer
-
-
-def prime_game(name):
-    counter = 0
-    while counter < 3:
-        n, user_answer, correct_answer = ask_question()
-        if user_answer.lower() == correct_answer:
-            print("Correct!")
-            counter += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(.' "
-                  f"Correct answer was '{correct_answer}'.")
-            break
-    print(congrats(name, counter))
+    question = n
+    is_prime = all(n % i != 0 for i in range(2, math.isqrt(n) + 1))
+    is_prime = is_prime and n > 1
+    correct_answer = 'yes' if is_prime else 'no'
+    return question, correct_answer
