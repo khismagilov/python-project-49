@@ -12,7 +12,7 @@ def get_question_and_right_answer():
     question1 = number_list[number1:number2:number3]
     if len(question1) >= 5 and len(question1) <= 10:
         random_number = random.randint(0, len(question1) - 1)
-        correct_answer = question1[random_number]
+        correct_answer = str(question1[random_number])
         question1[random_number] = '..'
         question = ' '.join([str(num) for num in question1])
         return question, correct_answer
