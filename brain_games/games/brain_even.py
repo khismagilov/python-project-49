@@ -10,4 +10,4 @@ def get_question_and_right_answer():
         correct_answer = 'yes'
     if question % 2 == 1:
         correct_answer = 'no'
-    return question, correct_answer
+    return question, correct_answer.lower()
