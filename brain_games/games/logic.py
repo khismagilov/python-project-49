@@ -15,7 +15,7 @@ def logic(game):
     while counter < 3:
         question, correct_answer = game.get_question_and_right_answer()
         user_answer = input(f'Question: {question}\nYour answer: ')
-        if user_answer == correct_answer:
+        if user_answer.lower() == correct_answer:
             print('Correct!')
             counter += 1
         else:
