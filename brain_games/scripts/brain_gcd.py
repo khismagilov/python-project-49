@@ -1,12 +1,9 @@
-from brain_games.games.brain_gcd import gcd_game
-from brain_games.games.logic import greet, congrats
+from brain_games.games import brain_gcd
+from brain_games.games.logic import logic
 
 
 def main():
-    name = greet()
-    counter = 0
-    gcd_game(name)
-    congrats(name, counter)
+    logic(brain_gcd)
 
 
 if __name__ == '__main__':
