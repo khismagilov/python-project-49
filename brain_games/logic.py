@@ -21,12 +21,6 @@ def logic(game):
         else:
             print(f"'{user_answer}' is wrong answer ;(."
                   f"Correct answer was '{correct_answer}'.")
-            break
-    print(congrats(name, counter))
-
-
-def congrats(name, counter):
-    if counter == 3:
-        return f'Congratulations, {name}!'
-    else:
-        return f"Let's try again, {name}!"
+            print(f"Let's try again, {name}!")
+            return
+    print(f'Congratulations, {name}!')
