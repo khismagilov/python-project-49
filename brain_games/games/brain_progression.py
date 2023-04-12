@@ -9,12 +9,12 @@ def get_question():
     slice_end = random.randint(slice_start + 5, 100)
     slice_step = random.randint(1, 10)
     number_list = list(range(1, 100))
-    question = number_list[slice_start:slice_end:slice_step]
-    question, correct_answer = get_answer(question)
+    question, correct_answer = get_answer()
     return question, correct_answer
 
 
-def get_answer(question):
+def get_answer():
+    question = number_list[slice_start:slice_end:slice_step]
     if len(question) >= 5 and len(question) <= 10:
         random_number = random.randint(0, len(question) - 1)
         correct_answer = str(question[random_number])
