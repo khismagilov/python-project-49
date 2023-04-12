@@ -16,7 +16,7 @@ def get_question():
         return get_question()
 
 
-def get_game():
+def get_question_and_right_answer():
     question = get_question()
     random_number = random.randint(0, len(question) - 1)
     correct_answer = str(question[random_number])
