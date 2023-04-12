@@ -10,7 +10,7 @@ def get_question(correct_answer):
     operations = ['+', '-', '*']
     operation = random.choice(operations)
     question = f"{number1} {operation} {number2}"
-    return question
+    return question, correct_answer
 
 
 def get_answer():
