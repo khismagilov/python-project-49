@@ -4,7 +4,7 @@ import random
 RULES = 'What number is missing in the progression?'
 
 
-def get_question_and_right_answer():
+def get_question():
     slice_start = random.randint(1, 100)
     slice_end = random.randint(1, 100)
     slice_step = random.randint(1, 100)
@@ -17,4 +17,4 @@ def get_question_and_right_answer():
         question = ' '.join([str(num) for num in question])
         return question, correct_answer
     else:
-        return get_question_and_right_answer()
+        return get_question
