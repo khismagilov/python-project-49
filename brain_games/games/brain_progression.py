@@ -10,13 +10,13 @@ def get_question():
     slice_step = random.randint(1, 10)
     number_list = list(range(1, 100))
     question = number_list[slice_start:slice_end:slice_step]
-    question, correct_answer = get_answer()
-    return question, correct_answer
+    return question
 
 
-def get_answer():
+def get_game():
+    question = get_question()
     random_number = random.randint(0, len(question) - 1)
     correct_answer = str(question[random_number])
     question[random_number] = '..'
     question = ' '.join([str(num) for num in question])
-    return question, correct_answer
+    return correct_answer, question
