@@ -4,7 +4,7 @@ import random
 RULES = 'What is the result of the expression?'
 
 
-def get_question(correct_answer):
+def get_question():
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
     operations = ['+', '-', '*']
