@@ -22,4 +22,4 @@ def get_game():
     correct_answer = str(question[random_number])
     question[random_number] = '..'
     question = ' '.join([str(num) for num in question])
-    return correct_answer, question
+    return question, correct_answer
