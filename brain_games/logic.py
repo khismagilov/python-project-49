@@ -14,7 +14,7 @@ def play_game(game):
     counter = 0
     NUMBER_OF_ROUNDS = 3
     while counter < NUMBER_OF_ROUNDS:
-        question, correct_answer = game.get_game()
+        question, correct_answer = game.get_question_and_right_answer()
         user_answer = input(f'Question: {question}\nYour answer: ')
         if user_answer.lower() == correct_answer:
             print('Correct!')
