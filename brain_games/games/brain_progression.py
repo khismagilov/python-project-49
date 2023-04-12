@@ -15,7 +15,7 @@ def get_question():
 
 
 def get_answer():
-        if len(question) >= 5 and len(question) <= 10:
+    if len(question) >= 5 and len(question) <= 10:
         random_number = random.randint(0, len(question) - 1)
         correct_answer = str(question[random_number])
         question[random_number] = '..'
