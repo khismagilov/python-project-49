@@ -5,9 +5,9 @@ RULES = 'What number is missing in the progression?'
 
 
 def get_question():
-    slice_start = random.randint(1, 100)
-    slice_end = random.randint(1, 100)
-    slice_step = random.randint(1, 100)
+    slice_start = random.randint(1, 90)
+    slice_end = random.randint(slice_start + 5, 100)
+    slice_step = random.randint(1, 10)
     number_list = list(range(1, 100))
     question = number_list[slice_start:slice_end:slice_step]
     correct_answer = get_answer(question)
