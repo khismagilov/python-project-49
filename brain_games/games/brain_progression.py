@@ -17,4 +17,4 @@ def get_question():
         question = ' '.join([str(num) for num in question])
         return question, correct_answer
     else:
-        return get_question
+        return get_question()
