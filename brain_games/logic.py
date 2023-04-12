@@ -12,9 +12,9 @@ def play_game(game):
     name = greet()
     print(game.RULES)
     counter = 0
-    number_of_rounds = 3
-    while counter < number_of_rounds:
-        question, correct_answer = game.get_question_and_right_answer()
+    NUMBER_OF_ROUNDS = 3
+    while counter < NUMBER_OF_ROUNDS:
+        question, correct_answer = game.get_question()
         user_answer = input(f'Question: {question}\nYour answer: ')
         if user_answer.lower() == correct_answer:
             print('Correct!')
