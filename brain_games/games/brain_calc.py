@@ -10,11 +10,11 @@ def get_question():
     operations = ['+', '-', '*']
     operation = random.choice(operations)
     question = f"{number1} {operation} {number2}"
-    correct_answer = get_answer()
+    correct_answer = get_answer(number1, number2, operation)
     return question, correct_answer
 
 
-def get_answer():
+def get_answer(number1, number2, operation):
     if operation == '+':
         correct_answer = str(number1 + number2)
     elif operation == '-':
