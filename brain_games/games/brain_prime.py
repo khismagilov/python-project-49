@@ -10,5 +10,5 @@ def is_prime(question):
 
 def get_question_and_right_answer():
     question = random.randint(1, 100)
-    correct_answer = 'yes' if is_prime and question > 1 else 'no'
+    correct_answer = 'yes' if is_prime(question) and question > 1 else 'no'
     return question, correct_answer
